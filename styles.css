@@ -79,6 +79,24 @@ body {
 header, nav, article, footer {
     padding: 1rem;
 }
+
+.skipLink{
+	position: absolute;
+	left: -1000px;
+	height:  0;
+	width:  0;
+}
+
+.skipLink:focus{
+    display: block;
+	top: 1em;
+	left: 1em;
+	font-size: 1.2em;
+	padding:3px 3px;
+	width: 25%;
+	height: 1.5em;
+}
+
 picture, #plan-your-trip, #about-your-destination  {
     margin-top:1rem;
 }

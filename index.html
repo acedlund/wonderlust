@@ -9,13 +9,17 @@
     <title>Wonderlust Travel- Destination Majorca</title>
 </head>
 <body>
-
+<a href="#home" class="skipLink">Skip to main content</a>
+<a href="#plan-your-trip" class="skipLink">Skip to plan your trip</a>
+<a href="#testimonials" class="skipLink">Skip to testimonials</a>
+<a href="#about-your-destination" class="skipLink">Skip to about your destination</a>
+<a href="#contact-us" class="skipLink">Skip to contact-us</a>
     <header>
         <h1>Destination Majorca</h1>
-        <p>
-            Let Wonderlust Travel help you plan the trip of your dreams!
-            Specializing in unforgettable experiences, we offer curated trips to the breathtaking island of Majorca, a hidden gem in the Mediterranean. Whether you crave sun-drenched beaches, charming villages, or thrilling outdoor adventures, our expert team will craft the perfect itinerary tailored just for you.
-        </p>
+        
+        <p>Let Wonderlust Travel help you plan the trip of your dreams!</p>
+        <p>Specializing in unforgettable experiences, we offer curated trips to the breathtaking island of Majorca, a hidden gem in the Mediterranean. Whether you crave sun-drenched beaches, charming villages, or thrilling outdoor adventures, our expert team will craft the perfect itinerary tailored just for you.</p>
+        
     </header>
     <nav>
         <h2>Main Navigation</h2>
@@ -28,7 +32,7 @@
             <li><a href="#">Destinations</a></li>
             <li><a href="#">Inspirations</a></li>
             <li><a href="#">Special</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
     <main>
@@ -47,9 +51,9 @@
                     404px, 920px, 1280px
                     -->
                     <picture>
-                        <source media="(min-width:1280px)" srcset="">
-                        <source media="(max-width:920px)" srcset="">
-                        <source media="(max-width:480px)" srcset="">
+                        <source media="(min-width:1280px)" srcset="images/majorca-beach-horizontal-l.jpg">
+                        <source media="(max-width:920px)" srcset="images/majorca-beach-vertical-m.jpg">
+                        <img src="images/majorca-beach-square-s.jpg" alt="A sandy beach at sunset">
                     </picture>
 
                     <small>Photo by <a href="https://unsplash.com/@charliefirth?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Charlie Firth</a> on <a href="https://unsplash.com/photos/sea-waves-crashing-on-shore-during-sunset-HQJIQjXq1HI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></small>
@@ -105,6 +109,14 @@
                         images/miranda-blake-M.png 920w
                         images/miranda-blake-L.png 1280w
                     -->
+
+                    <img alt="portrait of a blonde women in sunglasses" 
+                        srcset="
+                                images/miranda-blake-S.png 404w,
+                                images/miranda-blake-M.png 920w,
+                                images/miranda-blake-L.png 1280w"
+                        sizes="100vw">
+
                         <div>
                         <h4>Miranda Blake</h4>
                         <dl>
@@ -121,6 +133,13 @@
                         images/max-winter-M.png 920w
                         images/max-winter-L.png 1280w
                     -->
+                        <img alt="portrait of a man wearing a brown shirt"
+                            srcset="
+                                    images/max-winter-S.png 404w,
+                                    images/max-winter-M.png 920w,
+                                    images/max-winter-L.png 1280w"
+                            sizes="100vw">
+
                         <div>
                         <h4>Max Winter</h4>
                         <dl>
@@ -137,6 +156,14 @@
                         images/ines-villegoes-M.png 920w
                         images/ines-villegoes-L.png 1280w 
                     -->
+
+                    <img alt="portrait of a women wearing a police vest"
+                            srcset="
+                                    images/ines-villegoes-S.png 404w,
+                                    images/ines-villegoes-M.png 920w,
+                                    images/ines-villegoes-L.png 1280w"
+                            sizes="100vw">
+
                     <div>
                         <h4>Inés Villegoes</h4>
                         <dl>
@@ -153,6 +180,13 @@
                         images/carmen-lorenzo-M.png 920w
                         images/carmen-lorenzo-L.png 1280w
                     -->
+                        <img alt="portrait of a women with long brown hair"
+                            srcset="
+                                    images/carmen-lorenzo-S.png 404w,
+                                    images/carmen-lorenzo-M.png 920w,
+                                    images/carmen-lorenzo-L.png 1280w"
+                            sizes="100vw">
+
                         <div>
                         <h4>Carmen Lorenzo</h4>
                         <dl>
@@ -225,71 +259,74 @@
     </main>
     <footer>
         <section id="contact-us">
-            <h3>Contact Us</h3> 
+            <h2>Contact Us</h2> 
             <span id="required">(*required)</span>
             
-                <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
-                </div>
-                <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
-                </div>
-                <div>
-                    <label>Email<span>*</span></label>
-                    <input>
-                </div>
-                <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
-                </div>
-                <fieldset id="preferred-contact">
-                <legend>Preferred Contact Method<span>*</span></legend>
-                    <div> 
-                        <input>
-                        <label>Email</label>
+                <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+                    <div>
+                        <label for="firstName">First Name<span>*</span></label>
+                        <input type="text" name="firstName" id="firstName" required autocomplete="given-name">
                     </div>
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <label for="lastName">Last Name<span>*</span></label>
+                        <input type="text" name="lastName" id="lastName" required autocomplete="family-name">
                     </div>
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" name="email" id="email" required autocomplete="email">
                     </div>
-                </fieldset>
-                <fieldset id="destination">
-                    <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
-                        <option>Barcelona</option>
-                        <option>Granada</option>
-                        <option>Ibiza</option>
-                        <option>Madrid</option>
-                        <option>Majorca</option>
-                        <option>Seville</option>
-                        <option>Tenerife</option>
-                        <option>Valencia</option>
-                        <option>Other</option>
-                    </select>
-                </fieldset>
-                <fieldset id="travelTime">
-                    <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
-                        <option>Fall</option>
-                        <option>Winter</option>
-                        <option>Spring</option>
-                        <option>Summer</option>
-                        <option>Flexible</option>
-                    </select>
-                </fieldset>
-                <input>
+                    <div>
+                        <label for="phone">Phone<span>*</span></label>
+                        <input type="tel" name="phone" id="phone" required autocomplete="tel">
+                    </div>
+                    <fieldset id="preferred-contact">
+                    <legend>Preferred Contact Method<span>*</span></legend>
+                        <div>
+                            <input type="radio" name="contactPref" id="emailPref" required checked>
+                            <label for="emailPref">Email</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="contactPref" id="textPref" required>
+                            <label for="textPref">Text</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="contactPref" id="phonePref" required>
+                            <label for="phonePref">Phone</label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="destination">
+                        <legend>Destination<span>*</span></legend>
+                        <select id="select-destination" required>
+                            <option value="" disabled>Choose</option>
+                            <option>Barcelona</option>
+                            <option>Granada</option>
+                            <option>Ibiza</option>
+                            <option>Madrid</option>
+                            <option>Majorca</option>
+                            <option>Seville</option>
+                            <option>Tenerife</option>
+                            <option>Valencia</option>
+                            <option>Other</option>
+                        </select>
+                    </fieldset>
+                    <fieldset id="travelTime">
+                        <legend>Travel Time<span>*</span></legend>
+                        <select id="select-travel-time" required>
+                            <option value="" disabled>Choose</option>
+                            <option>Fall</option>
+                            <option>Winter</option>
+                            <option>Spring</option>
+                            <option>Summer</option>
+                            <option>Flexible</option>
+                        </select>
+                    </fieldset>
+                    
+                    <input type="submit" name="submit" id="submit" value="submit">
+                </form>
             
         </section>
         <section id="legal">
-            Legal
+            <h2>Legal</h2>
             <small>Copyright 2021 Wonderlust</small>
             <a href="#">Privacy Statement</a>
             <a href="#">Terms of Service</a>
